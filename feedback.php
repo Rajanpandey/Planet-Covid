@@ -1,10 +1,9 @@
 <?php
 include('header.php');
 require('connect.php');
+require('viewsCounter.php');
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+updateViewCount('feedback');
 
 if(isset($_POST['saveFeedback'])) {
     $feedback = mysqli_real_escape_string($conn, trim($_POST['feedback']));
@@ -22,15 +21,17 @@ mysqli_close($conn);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Feedback</title>
-    <link href="footer.css" rel="stylesheet">
+    <title>Feedback - Contact Me</title>
+    <link href="css/footer.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>
-    <div class="container pt-5">
+    <div class="container-fluid">
         <div class="row">
             <div class="col-12">
-                <h3 class="ml-4 mt-5">Submit feedback/suggestions etc:</h3>
+                <br/>
+                <a href="index.php" class="btn btn-danger ">Return back to Home</a>
+                <h3 class="ml-4 mt-3">Submit feedback/suggestions etc:</h3>
                 <form action="" method="POST">
                     <div class="form-group">
                         <textarea class="form-control ml-3 mb-3" rows="2" name="feedback" required></textarea>

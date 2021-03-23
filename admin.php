@@ -2,10 +2,6 @@
 include('header.php');
 require('connect.php');
 
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
 if(isset($_POST['addCase'])) {
     $loc = mysqli_real_escape_string($conn, trim($_POST['loc']));
     $count = mysqli_real_escape_string($conn, trim($_POST['count']));
@@ -27,7 +23,7 @@ mysqli_close($conn);
 <html>
 <head>
     <title>Admin Panel</title>
-    <link href="footer.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 </head>
 <body>

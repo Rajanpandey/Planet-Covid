@@ -1,14 +1,11 @@
 <?php
 include('header.php');
 require('connect.php');
+require('viewsCounter.php');
+
+updateViewCount('home');
 
 $today = new DateTime();
-
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-
-mysqli_query($conn, "INSERT INTO views () VALUES ()");
 
 $query = "SELECT * FROM cases";
 $result = mysqli_query($conn, $query);
@@ -31,16 +28,19 @@ mysqli_close($conn);
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Covid Status - PM</title>
+    <title>Planet Covid</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link href="footer.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid pt-3 pb-5">
+    <div class="container-fluid pt-3">
         <div class="row">
+            <div class="col-6"><center><a href="map.php" class="btn btn-danger btn-lg btn-block">Planet Society Covid Map</a></center></div>
+            <div class="col-6"><center><a href="protectYourself.php" class="btn btn-success btn-lg btn-block mt-2">Learn How to Protect Yourself</a></div></center>
             <div class="col-12 table-responsive">
-                <h4>Active Cases in Planet Millennium: <span class="text-danger"><?php echo $activeCases ?></span>/<?php echo $totalCases ?></h4>
-                <p><b class="text-danger">Note:</b> These are the reported cases that we know. As most of the cases are asymptomatic, there can be x6-x10 more cases.</p>
+                <br/>
+                <center><h4>Active Cases in Planet Millennium: <span class="text-danger"><?php echo $activeCases ?></span>/<?php echo $totalCases ?></h4>
+                <p><b class="text-danger">Note:</b> These are the reported cases that we know. As most of the cases are asymptomatic, there can be x6-x10 more cases.</p></center>
                 <h4>All Reported Cases:</h4>
                 <table class="table table-bordered table-hover mt-4" id="myTable">
                     <thead class="thead-dark">
