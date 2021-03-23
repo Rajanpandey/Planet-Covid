@@ -1,5 +1,5 @@
 <nav class="navbar sticky-top navbar-expand-sm bg-dark navbar-dark">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav nav-pills">
         <li class="nav-item">
             <a class="nav-link <?php echo !strpos($_SERVER['REQUEST_URI'], 'map.php') && !strpos($_SERVER['REQUEST_URI'], 'pune.php') && !strpos($_SERVER['REQUEST_URI'], 'feedback.php') && !strpos($_SERVER['REQUEST_URI'], 'protectYourself.php') ? 'active' : ''?>" href="index.php">   Home</a>
         </li>
@@ -15,5 +15,10 @@
         <li class="nav-item">
             <a class="nav-link <?php echo strpos($_SERVER['REQUEST_URI'], 'feedback.php') ? 'active' : ''?>" href="feedback.php">   Feedback</a>
         </li>
-    </ul>
 </nav>
+
+<style type="text/css">
+    .active {
+        background-color: green !important;
+    }
+</style>
