@@ -65,11 +65,13 @@ mysqli_close($conn);
         var key = keys[i];
         var data = {};
         data['date'] = new Date(key);
-        data['confirmed'] = puneData[key]['total']['confirmed'];
-        data['active'] = puneData[key]['total']['confirmed'] - puneData[key]['total']['recovered'] - puneData[key]['total']['deceased'];
-        data['recovered'] = puneData[key]['total']['recovered'];
-        data['deceased'] = puneData[key]['total']['deceased'];
-        if (key !== '2020-04-26') {
+        if (puneData[key]['total']) {
+            data['confirmed'] = puneData[key]['total']['confirmed'];
+            data['active'] = puneData[key]['total']['confirmed'] - puneData[key]['total']['recovered'] - puneData[key]['total']['deceased'];
+            data['recovered'] = puneData[key]['total']['recovered'];
+            data['deceased'] = puneData[key]['total']['deceased'];
+        }
+        if (key !== '2020-04-26' && puneData[key]['delta']) {
             data['delConfirmed'] = puneData[key]['delta']['confirmed'];
             data['delActive'] = puneData[key]['delta']['confirmed'] - puneData[key]['delta']['recovered'] - puneData[key]['delta']['deceased'];
             data['delRecovered'] = puneData[key]['delta']['recovered'];
