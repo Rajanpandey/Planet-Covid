@@ -7,6 +7,10 @@ function getIpAddress() {
     } else {
         $ip = $_SERVER['REMOTE_ADDR'];
     }
+    if (preg_match('/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:\/\d{2})?/', $ip)) {
+        preg_match('/\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?:\/\d{2})?/', $ip, $new_ip);
+        return $new_ip[0];
+    }
     return $ip;
 }
 
