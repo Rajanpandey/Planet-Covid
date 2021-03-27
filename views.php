@@ -20,10 +20,21 @@ while($row = mysqli_fetch_assoc($query)) {
     $viewsByDateAndIPArr[] = $row;
 }
 
+$uniqueVisitors = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(DISTINCT ip) FROM views"));
+
+$pageWiseViews = [
+    'home' => 0,
+    'map' => 0,
+    'pune' => 0,
+    'protectYourself' => 0,
+    'feedback' => 0,
+];
+
 $query = mysqli_query($conn, "SELECT page, SUM(count), date FROM views GROUP BY date, page");
 $viewsByDate = array();
 while($row = mysqli_fetch_assoc($query)) {
     $viewsByDate[] = $row;
+    $pageWiseViews[$row['page']] = $pageWiseViews[$row['page']] + $row['SUM(count)'];
 }
 
 mysqli_close($conn);
@@ -40,7 +51,48 @@ mysqli_close($conn);
     <div class="container">
         <div class="row">
             <div class="col-12 pt-5">
-                <h3 class="ml-3">View Count grouped Date:</h3>
+
+                <h3>Views per page:</h3>
+                <div class="card-group">
+                  <div class="card border-success">
+                    <div class="card-body text-success">
+                      <h5 class="card-title">Unique Visitors</h5>
+                      <p class="card-text"><?php echo $uniqueVisitors["COUNT(DISTINCT ip)"]; ?></p>
+                    </div>
+                  </div>
+                  <div class="card border-primary">
+                    <div class="card-body text-primary">
+                      <h5 class="card-title">Home</h5>
+                      <p class="card-text"><?php echo $pageWiseViews['home']; ?></p>
+                    </div>
+                  </div>
+                  <div class="card border-info">
+                    <div class="card-body text-info">
+                      <h5 class="card-title">Society Map</h5>
+                      <p class="card-text"><?php echo $pageWiseViews['map']; ?></p>
+                    </div>
+                  </div>
+                  <div class="card border-secondary">
+                    <div class="card-body text-secondary">
+                      <h5 class="card-title">Covid in Pune</h5>
+                      <p class="card-text"><?php echo $pageWiseViews['pune']; ?></p>
+                    </div>
+                  </div>
+                  <div class="card border-warning">
+                    <div class="card-body text-warning">
+                      <h5 class="card-title">Protect Yourself</h5>
+                      <p class="card-text"><?php echo $pageWiseViews['protectYourself']; ?></p>
+                    </div>
+                  </div>
+                  <div class="card border-danger">
+                    <div class="card-body text-danger">
+                      <h5 class="card-title">Feedback</h5>
+                      <p class="card-text"><?php echo $pageWiseViews['feedback']; ?></p>
+                    </div>
+                  </div>
+                </div>
+
+                <h3 class="pt-5">View Count grouped Date:</h3>
                 <table class="table table-bordered table-hover mt-4" id="myTable">
                     <thead class="thead-dark">
                         <tr>
