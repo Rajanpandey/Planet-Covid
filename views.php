@@ -20,6 +20,12 @@ while($row = mysqli_fetch_assoc($query)) {
     $viewsByDateAndIPArr[] = $row;
 }
 
+$query = mysqli_query($conn, "SELECT * FROM feedback");
+$feedbackArr = array();
+while($row = mysqli_fetch_assoc($query)) {
+    $feedbackArr[] = $row;
+}
+
 $uniqueVisitors = mysqli_fetch_assoc(mysqli_query($conn, "SELECT COUNT(DISTINCT ip) FROM views"));
 
 $pageWiseViews = [
@@ -52,7 +58,29 @@ mysqli_close($conn);
         <div class="row">
             <div class="col-12 pt-5">
 
-                <h3>Views per page:</h3>
+                <h3>Feedbacks:</h3>
+                <table class="table table-bordered table-hover mt-4" id="myTable">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Sr. No.</th>
+                            <th>Feedback</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                        for ($i=0; $i<count($feedbackArr); $i=$i+1) {
+                    ?>
+                            <tr>
+                                <td><?php echo $i + 1 ?></td>
+                                <td><?php echo $feedbackArr[$i]['feedback']; ?></td>
+                            </tr>
+                    <?php
+                        }
+                    ?>
+                    </tbody>
+                </table>
+
+                <h3 class="pt-4">Views per page:</h3>
                 <div class="card-group">
                   <div class="card border-success">
                     <div class="card-body text-success">

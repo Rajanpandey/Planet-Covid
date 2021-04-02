@@ -9,7 +9,7 @@ if(isset($_POST['saveFeedback'])) {
     $feedback = mysqli_real_escape_string($conn, trim($_POST['feedback']));
     $query = "INSERT INTO feedback (feedback) VALUES ('$feedback')";
     if(mysqli_query($conn, $query)) {
-        echo "<script type=\"text/javascript\"> alert('Thank you for the feedback!'); location.href = 'contact.php'; </script>";
+        echo "<script type=\"text/javascript\"> alert('Thank you for the feedback!'); location.href = 'feedback.php'; </script>";
     } else {
         echo "Error: " . $query . "<br>" . mysqli_error($conn);
     }
