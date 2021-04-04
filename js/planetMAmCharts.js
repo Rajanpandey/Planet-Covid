@@ -31,7 +31,6 @@ for (var d = new Date('2020-7-21'); d <= now; d.setDate(d.getDate() + 1)) {
     if (d < new Date('2020-8-5')) {
         data['active'] = 1;
     } else {
-        console.log('in')
         data['active'] = cumulativeCount - formattedPlanetData[idx - 14]['confirmed'];
     }
     data['confirmed'] = cumulativeCount;

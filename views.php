@@ -32,6 +32,8 @@ $pageWiseViews = [
     'home' => 0,
     'map' => 0,
     'pune' => 0,
+    'planet' => 0,
+    'puneLockdown' => 0,
     'protectYourself' => 0,
     'feedback' => 0,
 ];
