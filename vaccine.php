@@ -1,17 +1,14 @@
 <?php
 include('header.php');
-require('connect.php');
 require('viewsCounter.php');
 
-updateViewCount('planet');
-
-mysqli_close($conn);
+updateViewCount('vaccine');
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Planet Covid Status</title>
+    <title>Pune Vaccine Status</title>
     <link href="css/footer.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -21,29 +18,30 @@ mysqli_close($conn);
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row">
-            <br/>
+        <div class="row pb-3">
             <div class="col-12 pt-3 pb-3">
                 <a href="index.php" class="btn btn-danger">Return back to Home</a>
             </div>
             <div class="col-12 col-xl-6">
-                <h4>Daily <b class="text-danger">New Confirmed Cases</b> Count in Planet M:</h4>
-                <div id="dailyNewConfirmPlanet" style="width: 100%; height: 500px;"></div>
+                <h4><b class="text-danger">Daily Vaccine</b> Count in Pune:</h4>
+                <div id="totalVaccine" style="width: 100%; height: 500px;"></div>
             </div>
             <div class="col-12 col-xl-6">
-                <h4>Day-wise <b class="text-danger">Active Cases</b> in Planet M:</h4>
-                <div id="totalActivePlanet" style="width: 100%; height: 500px;"></div>
+                <h4><b class="text-danger">Percentage of people who got 2nd dose</b> after 1st dose in Pune:</h4>
+                <div id="secondVsFirstDose2" style="width: 100%; height: 500px;"></div>
             </div>
-            <br/>
-            <hr/>
-            <div class="col-12">
-                <h4>Total <b class="text-danger">Cumulative Confirmed Cases</b> in Planet M:</h4>
-                <div id="totalConfirmPlanet" style="width: 100%; height: 500px;"></div>
+            <div class="col-12 col-xl-6">
+                <h4><b class="text-danger">Different Vaccines</b> Administered in Pune:</h4>
+                <div id="vaccine" style="width: 100%; height: 500px;"></div>
+            </div>
+            <div class="col-12 col-xl-6">
+                <h4><b class="text-danger">Gender-wise</b> Vaccination Breakup in Pune:</h4>
+                <div id="gender" style="width: 100%; height: 500px;"></div>
             </div>
         </div>
     </div>
 
-    <script src="js/planetMAmCharts.js"></script>
+    <script src="js/vaccineData.js"></script>
     <div class="footer">
         <p>Made with ❤️ by Rajan</p>
     </div>

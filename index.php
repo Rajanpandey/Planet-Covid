@@ -47,10 +47,12 @@ mysqli_close($conn);
 <body>
     <div class="container-fluid pt-3">
         <div class="row">
-            <div class="col-3"><center><a href="map.php" class="btn btn-danger btn-lg btn-block">Planet Society Covid Map</a></center></div>
-            <div class="col-3"><center><a href="puneLockdown.php" class="btn btn-info btn-lg btn-block">Pune Lockdown Details</a></div></center>
-            <div class="col-3"><center><a href="pune.php" class="btn btn-warning btn-lg btn-block">Current Covid Spread in Pune</a></center></div>
-            <div class="col-3"><center><a href="protectYourself.php" class="btn btn-success btn-lg btn-block">Learn How to Protect Yourself</a></div></center>
+            <div class="col-6 pb-4"><center><a href="map.php" class="btn btn-danger btn-lg btn-block">Planet Society Covid Map</a></center></div>
+            <div class="col-6 pb-4"><center><a href="planet.php" class="btn btn-danger btn-lg btn-block">Current Covid Spread in Planet</a></center></div>
+            <div class="col-6 pb-4"><center><a href="vaccine.php" class="btn btn-warning btn-lg btn-block">Current Vaccine Status in Pune</a></center></div>
+            <div class="col-6 pb-4"><center><a href="pune.php" class="btn btn-warning btn-lg btn-block">Current Covid Spread in Pune</a></center></div>
+            <div class="col-6"><center><a href="puneLockdown.php" class="btn btn-success btn-lg btn-block">Pune Lockdown Details</a></div></center>
+            <div class="col-6"><center><a href="protectYourself.php" class="btn btn-success btn-lg btn-block">Learn How to Protect Yourself</a></div></center>
             <div class="col-12 table-responsive">
                 <br/>
                 <center><h4>Active Cases in Planet Millennium: <span class="text-danger"><?php echo $activeCases ?></span>/<?php echo $totalCases ?></h4>

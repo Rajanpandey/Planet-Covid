@@ -18,46 +18,63 @@ updateViewCount('puneLockdown');
             <div class="col-12">
                 <br/>
                 <a href="index.php" class="btn btn-danger">Return back to Home</a>
-                <h3 class="mt-3">Pune Semi-Lockdown is applicable from 3rd April (Saturday) till 9th April (Friday):</h3>
-                <div class="row">
+                <h3 class="mt-4">Pune Semi-Lockdown is applicable till 30th April (Friday):</h3>
+                <div class="row pb-5">
                     <div class="col-12 col-xl-6">
-                        <h3 class="mt-3">Restrictions:</h3>
+                        <h3 class="mt-4">Curfew (barring essential servies):</h3>
                         <ul class="list-group">
-                            <li class="list-group-item"><b>6pm to 6am travel restrictions</b> for all vehicles including cabs, taxis and autorickshaws.</li>
-                            <li class="list-group-item"><b>Barring medical and essential services</b>, all shops must close as per the 6pm deadline.</li>
+                            <li class="list-group-item"><b>On weekends</b>, curfew will be imposed from <b>6pm on Fridays to 7am on Mondays</b>.</li>
+                            <li class="list-group-item"><b>On weekdays</b>, travel restrictions from <b>6pm to 7am</b> for all vehicles including cabs, taxis and autorickshaws.</li>
                             <li class="list-group-item"><b>Complete ban</b> on social, political, and religious meetings.</li>
+                            <li class="list-group-item"><b>Gardens, Public Ground</b> will be open only during non-curfew hours.</li>
+                            <li class="list-group-item"><b>Private Transport</b> will be working only during non-curfew hours.</li>
+                            <li class="list-group-item"><b>Auto Rickshaw</b> – Driver + 2 passengers only.</li>
+                            <li class="list-group-item"><b>Taxi cab/four-wheelers</b> – Driver + 50% vehicle capacity as per RTO.</li>
                         </ul>
                     </div>
                     <div class="col-12 col-xl-6">
-                        <h3 class="mt-3">No groups during the day too:</h3>
+                        <h3 class="mt-4">Essential Services include the following:</h3>
                         <ul class="list-group">
-                            <li class="list-group-item">Ban on assembly of <b>more than 5 persons at one place from 6am to 6pm</b>.</li>
+                            <li class="list-group-item">Hospitals, diagnostic centers, Clinics, Medical insurance offices, Pharmacies, Pharmaceutical companies, other medical and health services.</li>
+                            <li class="list-group-item">Groceries, Vegetables Shops, dairies, bakeries, confectionaries, food shops.</li>
+                            <li class="list-group-item">Public transport – trains, Taxis, Autorickshaws and public buses.</li>
+                            <li class="list-group-item">E-commerce, Accredited Media, Transport of Goods, Agriculture related services.</li>
+                            <li class="list-group-item">Public transport – trains, Taxis, Autorickshaws and public buses.</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <h3 class="mt-4">Shutters Down</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">Restaurants (dine-in), bars, food courts, malls to remain shut till further orders.</li>
+                            <li class="list-group-item">Barber shops, salons, beauty parlors, spas to remain shut till further orders.</li>
+                            <li class="list-group-item">Cinemas, drama theatres, amusement parks, water parks, arcades, video game parlours to remain shut till further orders.</li>
+                            <li class="list-group-item">Clubs, swimming pools, sports complexes, gyms to remain shut till further orders.</li>
+                            <li class="list-group-item">Schools and colleges shut till <b>April 30</b>, all coaching classes, excluding MPSC, UPSC study centres with 50% capacity, to remain shut.</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <h3 class="mt-4">What is permitted?</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">Milk, vegetable, fruit supply, newspaper distribution, establishments providing essential services and their staff, people going for vaccination and their vehicles, and vehicles transporting employees for industrial work are <b>exempted from night travel restrictions</b>.</li>
+                            <li class="list-group-item">PMPML buses only for emergency services.</li>
+                            <li class="list-group-item"><b>Online food delivery from 7am till 6pm</b>.</li>
+                            <li class="list-group-item">Marriages allowed with 50 people.</li>
+                            <li class="list-group-item">Funerals with maximum of 20 people.</li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-xl-6">
+                        <h3 class="mt-4">No groups during the day too:</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">Ban on assembly of <b>more than 5 persons at one place from 7am to 6pm</b>.</li>
                             <li class="list-group-item"><b>Rs 1,000 fine</b> for each person for violation.</li>
                             <li class="list-group-item">Prosecution under Section 188 (disobedience of order) of the IPC.</li>
                         </ul>
                     </div>
                     <div class="col-12 col-xl-6">
-                        <h3 class="mt-5">Shutters Down</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">Restaurants (dine-in), bars, food courts, malls, cinemas, theatres, swimming pools, spas, gyms, sports complexes, and clubs to remain shut <b>till further orders</b>.</li>
-                            <li class="list-group-item">Schools and colleges shut till <b>April 30</b>, all coaching classes, excluding MPSC, UPSC study centres with 50% capacity, to remain shut.</li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-xl-6">
-                        <h3 class="mt-5">Carry Documents</h3>
+                        <h3 class="mt-4">Carry Documents</h3>
                         <ul class="list-group">
                             <li class="list-group-item"><b>Office-goers</b> must carry I-cards & letters by their employers specifying duty hours.</li>
                             <li class="list-group-item">Travel to and from <b>airport</b> by showing flight tickers or boarding pass.</li>
-                        </ul>
-                    </div>
-                    <div class="col-12">
-                        <h3 class="mt-5">What is permitted?</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">Milk, vegetable, fruit supply, newspaper distribution, establishments providing essential services and their staff, people going for vaccination and their vehicles, and vehicles transporting employees for industrial work are <b>exempted from night travel restrictions</b>.</li>
-                            <li class="list-group-item">PMPML buses only for emergency services.</li>
-                            <li class="list-group-item"><b>Online food delivery till 11pm</b>.</li>
-                            <li class="list-group-item">Marriages allowed with 50 people.</li>
-                            <li class="list-group-item">Only 20 people for last rites.</li>
                         </ul>
                     </div>
                 </div>
