@@ -91,32 +91,50 @@ mysqli_close($conn);
                       <p class="card-text"><?php echo $uniqueVisitors["COUNT(DISTINCT ip)"]; ?></p>
                     </div>
                   </div>
-                  <div class="card border-primary">
-                    <div class="card-body text-primary">
+                  <div class="card border-success">
+                    <div class="card-body text-success">
                       <h5 class="card-title">Home</h5>
                       <p class="card-text"><?php echo $pageWiseViews['home']; ?></p>
                     </div>
                   </div>
-                  <div class="card border-info">
-                    <div class="card-body text-info">
+                  <div class="card border-primary">
+                    <div class="card-body text-primary">
                       <h5 class="card-title">Society Map</h5>
                       <p class="card-text"><?php echo $pageWiseViews['map']; ?></p>
                     </div>
                   </div>
-                  <div class="card border-secondary">
-                    <div class="card-body text-secondary">
-                      <h5 class="card-title">Covid in Pune</h5>
-                      <p class="card-text"><?php echo $pageWiseViews['pune']; ?></p>
-                    </div>
-                  </div>
-                  <div class="card border-warning">
-                    <div class="card-body text-warning">
-                      <h5 class="card-title">Protect Yourself</h5>
-                      <p class="card-text"><?php echo $pageWiseViews['protectYourself']; ?></p>
+                  <div class="card border-primary">
+                    <div class="card-body text-primary">
+                      <h5 class="card-title">Covid in Planet</h5>
+                      <p class="card-text"><?php echo $pageWiseViews['planet']; ?></p>
                     </div>
                   </div>
                   <div class="card border-danger">
                     <div class="card-body text-danger">
+                      <h5 class="card-title">Covid in Pune</h5>
+                      <p class="card-text"><?php echo $pageWiseViews['pune']; ?></p>
+                    </div>
+                  </div>
+                  <div class="card border-danger">
+                    <div class="card-body text-danger">
+                      <h5 class="card-title">Pune Vaccination</h5>
+                      <p class="card-text"><?php echo $pageWiseViews['vaccine']; ?></p>
+                    </div>
+                  </div>
+                  <div class="card border-secondary">
+                    <div class="card-body text-secondary">
+                      <h5 class="card-title">Lockdown</h5>
+                      <p class="card-text"><?php echo $pageWiseViews['puneLockdown']; ?></p>
+                    </div>
+                  </div>
+                  <div class="card border-secondary">
+                    <div class="card-body text-secondary">
+                      <h5 class="card-title">Protect Yourself</h5>
+                      <p class="card-text"><?php echo $pageWiseViews['protectYourself']; ?></p>
+                    </div>
+                  </div>
+                  <div class="card border-secondary">
+                    <div class="card-body text-secondary">
                       <h5 class="card-title">Feedback</h5>
                       <p class="card-text"><?php echo $pageWiseViews['feedback']; ?></p>
                     </div>
