@@ -22,13 +22,17 @@ updateViewCount('vaccine');
             <div class="col-12 pt-3 pb-3">
                 <a href="index.php" class="btn btn-danger">Return back to Home</a>
             </div>
-            <div class="col-12 col-xl-6">
+            <div class="col-12 pb-4">
                 <h4><b class="text-danger">Daily Vaccine</b> Count in Pune:</h4>
                 <div id="totalVaccine" style="width: 100%; height: 500px;"></div>
             </div>
-            <div class="col-12 col-xl-6">
-                <h4><b class="text-danger">Percentage of people who got 2nd dose</b> after 1st dose in Pune:</h4>
-                <div id="secondVsFirstDose" style="width: 100%; height: 500px;"></div>
+            <div class="col-12 col-xl-6 pb-4">
+                <h4>Percentage of Punekars who got <b class="text-danger">1st dose only</b>:</h4>
+                <div id="firstDose" style="width: 100%; height: 500px;"></div>
+            </div>
+            <div class="col-12 col-xl-6 pb-4">
+                <h4>Percentage of Punekars who got <b class="text-danger">both 1st and 2nd doses</b>:</h4>
+                <div id="secondDose" style="width: 100%; height: 500px;"></div>
             </div>
             <div class="col-12 col-xl-6">
                 <h4><b class="text-danger">Different Vaccines</b> Administered in Pune:</h4>
@@ -41,7 +45,7 @@ updateViewCount('vaccine');
         </div>
     </div>
 
-    <script src="js/vaccineData.js?version=1"></script>
+    <script src="js/vaccineData.js?version=2"></script>
     <div class="footer">
         <p>Made with ❤️ by Rajan</p>
     </div>
