@@ -272,7 +272,6 @@ am4core.ready(function() {
       return null;
     }
 
-    // create chart
     var chart = am4core.create("secondVsFirstDose2", am4charts.GaugeChart);
     chart.hiddenState.properties.opacity = 0;
     chart.fontSize = 11;
@@ -282,7 +281,6 @@ am4core.ready(function() {
     /**
      * Normal axis
      */
-
     var axis = chart.xAxes.push(new am4charts.ValueAxis());
     axis.min = chartMin;
     axis.max = chartMax;
@@ -301,7 +299,6 @@ am4core.ready(function() {
     /**
      * Axis for ranges
      */
-
     var axis2 = chart.xAxes.push(new am4charts.ValueAxis());
     axis2.min = chartMin;
     axis2.max = chartMax;
@@ -315,12 +312,9 @@ am4core.ready(function() {
     axis2.renderer.labels.template.fontWeight = "bold";
     axis2.renderer.labels.template.fillOpacity = 0.3;
 
-
-
     /**
     Ranges
     */
-
     for (let grading of data.gradingData) {
       var range = axis2.axisRanges.create();
       range.axisFill.fill = am4core.color(grading.color);
@@ -345,7 +339,6 @@ am4core.ready(function() {
     /**
      * Label 1
      */
-
     var label = chart.radarContainer.createChild(am4core.Label);
     label.isMeasured = false;
     label.fontSize = "6em";
@@ -361,7 +354,6 @@ am4core.ready(function() {
     /**
      * Label 2
      */
-
     var label2 = chart.radarContainer.createChild(am4core.Label);
     label2.isMeasured = false;
     label2.fontSize = "2em";
@@ -370,11 +362,9 @@ am4core.ready(function() {
     label2.text = matchingGrade.title.toUpperCase();
     label2.fill = am4core.color(matchingGrade.color);
 
-
     /**
      * Hand
      */
-
     var hand = chart.hands.push(new am4charts.ClockHand());
     hand.axis = axis2;
     hand.innerRadius = am4core.percent(55);

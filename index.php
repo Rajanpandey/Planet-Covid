@@ -43,15 +43,16 @@ mysqli_close($conn);
     <title>Planet Covid</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link href="css/footer.css" rel="stylesheet">
+    <link href="css/buttonIcons.css" rel="stylesheet">
 </head>
 <body>
     <div class="container-fluid pt-3">
         <div class="row">
-            <div class="col-6 pb-4"><center><a href="map.php" class="btn btn-danger btn-lg btn-block">Planet Society Covid Map</a></center></div>
-            <div class="col-6 pb-4"><center><a href="planet.php" class="btn btn-danger btn-lg btn-block">Current Covid Spread in Planet</a></center></div>
-            <div class="col-6 pb-4"><center><a href="vaccine.php" class="btn btn-warning btn-lg btn-block">Current Vaccine Status in Pune</a></center></div>
+            <div class="col-6 pb-4"><center><img class="update" src="img/update.jpg"/><a href="map.php" class="btn btn-danger btn-lg btn-block">Planet Society Covid Map</a></center></div>
+            <div class="col-6 pb-4"><center><img class="new" src="img/new.png"/><a href="planet.php" class="btn btn-danger btn-lg btn-block">Current Covid Spread in Planet</a></center></div>
+            <div class="col-6 pb-4"><center><img class="new" src="img/new.png"/><a href="vaccine.php" class="btn btn-warning btn-lg btn-block">Current Vaccine Status in Pune</a></center></div>
             <div class="col-6 pb-4"><center><a href="pune.php" class="btn btn-warning btn-lg btn-block">Current Covid Spread in Pune</a></center></div>
-            <div class="col-6"><center><a href="puneLockdown.php" class="btn btn-success btn-lg btn-block">Pune Lockdown Details</a></div></center>
+            <div class="col-6"><center><img class="update" src="img/update.jpg"/><a href="puneLockdown.php" class="btn btn-success btn-lg btn-block">Pune Lockdown Details</a></div></center>
             <div class="col-6"><center><a href="protectYourself.php" class="btn btn-success btn-lg btn-block">Learn How to Protect Yourself</a></div></center>
             <div class="col-12 table-responsive">
                 <br/>
