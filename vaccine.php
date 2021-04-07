@@ -28,7 +28,7 @@ updateViewCount('vaccine');
             </div>
             <div class="col-12 col-xl-6">
                 <h4><b class="text-danger">Percentage of people who got 2nd dose</b> after 1st dose in Pune:</h4>
-                <div id="secondVsFirstDose2" style="width: 100%; height: 500px;"></div>
+                <div id="secondVsFirstDose" style="width: 100%; height: 500px;"></div>
             </div>
             <div class="col-12 col-xl-6">
                 <h4><b class="text-danger">Different Vaccines</b> Administered in Pune:</h4>
@@ -41,7 +41,7 @@ updateViewCount('vaccine');
         </div>
     </div>
 
-    <script src="js/vaccineData.js"></script>
+    <script src="js/vaccineData.js?version=1"></script>
     <div class="footer">
         <p>Made with ❤️ by Rajan</p>
     </div>
