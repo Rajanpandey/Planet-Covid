@@ -14,7 +14,7 @@ var vaccineData = getVaccineData();
 var formattedData = [];
 
 for (var i = 6; i < vaccineData[0].length; i += 10) {
-    if (vaccineData[1][i] != "") {
+    if (vaccineData[0][i] != "" && vaccineData[1][i] != "") {
       var data = {};
       data['date'] = new Date(vaccineData[0][i].split("/").reverse().join("-"));
       data['TotalIndividualsRegistered'] = parseInt(vaccineData[1][i]);
@@ -153,13 +153,13 @@ am4core.ready(function() {
       gradingData: [
         {
           title: "Less than 25%",
-          color: "#f04922",
+          color: "#ee1f25",
           lowScore: 0,
           highScore: 25
         },
         {
           title: "Less than 50%",
-          color: "#ee1f25",
+          color: "#f04922",
           lowScore: 25,
           highScore: 50
         },
@@ -295,16 +295,6 @@ am4core.ready(function() {
     hand.value = data.score;
     hand.fill = am4core.color("#444");
     hand.stroke = am4core.color("#000");
-
-    hand.events.on("positionchanged", function(){
-      label.text = axis2.positionToValue(hand.currentPosition).toFixed(1);
-      var value2 = axis.positionToValue(hand.currentPosition);
-      var matchingGrade = lookUpGrade(axis.positionToValue(hand.currentPosition), data.gradingData);
-      label2.text = matchingGrade.title.toUpperCase();
-      label2.fill = am4core.color(matchingGrade.color);
-      label2.stroke = am4core.color(matchingGrade.color);
-      label.fill = am4core.color(matchingGrade.color);
-    })
 });
 
 am4core.ready(function() {
@@ -318,13 +308,13 @@ am4core.ready(function() {
       gradingData: [
         {
           title: "Less than 25%",
-          color: "#f04922",
+          color: "#ee1f25",
           lowScore: 0,
           highScore: 25
         },
         {
           title: "Less than 50%",
-          color: "#ee1f25",
+          color: "#f04922",
           lowScore: 25,
           highScore: 50
         },
@@ -460,14 +450,4 @@ am4core.ready(function() {
     hand.value = data.score;
     hand.fill = am4core.color("#444");
     hand.stroke = am4core.color("#000");
-
-    hand.events.on("positionchanged", function(){
-      label.text = axis2.positionToValue(hand.currentPosition).toFixed(1);
-      var value2 = axis.positionToValue(hand.currentPosition);
-      var matchingGrade = lookUpGrade(axis.positionToValue(hand.currentPosition), data.gradingData);
-      label2.text = matchingGrade.title.toUpperCase();
-      label2.fill = am4core.color(matchingGrade.color);
-      label2.stroke = am4core.color(matchingGrade.color);
-      label.fill = am4core.color(matchingGrade.color);
-    })
 });

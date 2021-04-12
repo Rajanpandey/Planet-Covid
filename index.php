@@ -34,6 +34,16 @@ if(isset($_POST['submitSurvey'])) {
     }
 }
 
+if(isset($_POST['saveFeedback'])) {
+    $feedback = mysqli_real_escape_string($conn, trim($_POST['feedback']));
+    $query = "INSERT INTO feedback (feedback) VALUES ('$feedback')";
+    if(mysqli_query($conn, $query)) {
+        echo "<script type=\"text/javascript\"> alert('Thank you for the feedback!'); location.href = 'index.php'; </script>";
+    } else {
+        echo "Error: " . $query . "<br>" . mysqli_error($conn);
+    }
+}
+
 mysqli_close($conn);
 ?>
 
@@ -48,12 +58,25 @@ mysqli_close($conn);
 <body>
     <div class="container-fluid pt-3">
         <div class="row">
-            <div class="col-6 pb-4"><center><img class="update" src="img/update.jpg"/><a href="map.php" class="btn btn-danger btn-lg btn-block">Planet Society Covid Map</a></center></div>
-            <div class="col-6 pb-4"><center><img class="new" src="img/new.png"/><a href="planet.php" class="btn btn-danger btn-lg btn-block">Current Covid Spread in Planet</a></center></div>
-            <div class="col-6 pb-4"><center><img class="new" src="img/new.png"/><a href="vaccine.php" class="btn btn-warning btn-lg btn-block">Current Vaccine Status in Pune</a></center></div>
-            <div class="col-6 pb-4"><center><a href="pune.php" class="btn btn-warning btn-lg btn-block">Current Covid Spread in Pune</a></center></div>
-            <div class="col-6"><center><img class="update" src="img/update.jpg"/><a href="puneLockdown.php" class="btn btn-success btn-lg btn-block">Pune Lockdown Details</a></div></center>
-            <div class="col-6"><center><a href="protectYourself.php" class="btn btn-success btn-lg btn-block">Learn How to Protect Yourself</a></div></center>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-4 pb-4"><center><a href="map.php" class="btn btn-danger btn-lg btn-block">Planet - Covid Map</a></center></div>
+                    <div class="col-4"><center><a href="vaccine.php" class="btn btn-warning btn-lg btn-block">Pune - Vaccine Status</a></center></div>
+                    <div class="col-4 pb-4"><center><a href="puneLockdown.php" class="btn btn-success btn-lg btn-block">Info - Lockdown Update</a></center></div>
+                    <div class="col-4"><center><a href="planet.php" class="btn btn-danger btn-lg btn-block">Planet - Covid Spread</a></center></div>
+                    <div class="col-4 pb-4"><center><a href="pune.php" class="btn btn-warning btn-lg btn-block">Pune - Covid Spread</a></center></div>
+                    <div class="col-4"><center><a href="protectYourself.php" class="btn btn-success btn-lg btn-block">Info - Protect Yourself</a></center></div>
+                </div>
+            </div>
+            <div class="col-4">
+                <h5>Your feedback and suggestions are valuable:</h5>
+                <form action="" method="POST">
+                    <div class="form-group">
+                        <textarea class="form-control ml-3 mb-3" rows="2" name="feedback" required></textarea>
+                        <button type="submit" name="saveFeedback" class="btn btn-primary ml-3"><i class="fas fa-comment-alt"></i>&nbsp; Submit Feedback Anonymously</button>
+                    </div>
+                </form>
+            </div>
             <div class="col-12 table-responsive">
                 <br/>
                 <center><h4>Active Cases in Planet Millennium: <span class="text-danger"><?php echo $activeCases ?></span>/<?php echo $totalCases ?></h4>

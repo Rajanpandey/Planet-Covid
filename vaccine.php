@@ -45,7 +45,7 @@ updateViewCount('vaccine');
         </div>
     </div>
 
-    <script src="js/vaccineData.js?version=2"></script>
+    <script src="js/vaccineData.js?version=4"></script>
     <div class="footer">
         <p>Made with ❤️ by Rajan</p>
     </div>
