@@ -37,6 +37,7 @@ $pageWiseViews = [
     'protectYourself' => 0,
     'feedback' => 0,
     'vaccine' => 0,
+    'plasma' => 0,
 ];
 
 $query = mysqli_query($conn, "SELECT page, SUM(count), date FROM views GROUP BY date, page");

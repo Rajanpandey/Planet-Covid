@@ -62,7 +62,7 @@ mysqli_close($conn);
                 <div class="row">
                     <div class="col-4 pb-4"><center><a href="map.php" class="btn btn-danger btn-lg btn-block">Planet - Covid Map</a></center></div>
                     <div class="col-4"><center><a href="vaccine.php" class="btn btn-warning btn-lg btn-block">Pune - Vaccine Status</a></center></div>
-                    <div class="col-4 pb-4"><center><a href="puneLockdown.php" class="btn btn-success btn-lg btn-block">Info - Lockdown Update</a></center></div>
+                    <div class="col-4 pb-4"><center><a href="puneLockdown.php" class="btn btn-success btn-lg btn-block">Info - Break the Chain</a></center></div>
                     <div class="col-4"><center><a href="planet.php" class="btn btn-danger btn-lg btn-block">Planet - Covid Spread</a></center></div>
                     <div class="col-4 pb-4"><center><a href="pune.php" class="btn btn-warning btn-lg btn-block">Pune - Covid Spread</a></center></div>
                     <div class="col-4"><center><a href="protectYourself.php" class="btn btn-success btn-lg btn-block">Info - Protect Yourself</a></center></div>
@@ -78,6 +78,8 @@ mysqli_close($conn);
                 </form>
             </div>
             <div class="col-12 table-responsive">
+                <center><a href="plasma.php" class="btn btn-danger btn-lg btn-block">Request or Volunteer to Donate Plasma</a>
+                <br/>
                 <br/>
                 <center><h4>Active Cases in Planet Millennium: <span class="text-danger"><?php echo $activeCases ?></span>/<?php echo $totalCases ?></h4>
                 <p><b class="text-danger">Note:</b> These are the reported cases that we know. As most of the cases are asymptomatic, there can be x6-x10 more cases.</p></center>

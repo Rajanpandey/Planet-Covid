@@ -28,7 +28,7 @@ updateViewCount('map');
             </div>
 
             <div class="container pb-5">
-                <h4 class="pt-3">Historically Most Infected Buildings (bar height is in comparison with most infected building):</h4>
+                <h4 class="pt-3">Historically Most Infected Buildings:</h4>
                 <h5>Note: Vertical bar height is in comparison with the most infected building</h5>
                 <div class="progress progress-bar-vertical building-bar">
                     <div class="progress-bar progress-bar-striped" id="A1"></div>
@@ -81,7 +81,7 @@ updateViewCount('map');
             </div>
 
             <div class="container pb-1">
-                <h4 class="pt-3">Historicaly Infected Row Houses:</h4>
+                <h4 class="pt-3">Historically Infected Row Houses:</h4>
                 <div class="progress progress-bar-vertical row-house-bar">
                     <div class="progress-bar progress-bar-striped bg-danger" id="RH1"></div>
                 </div>

@@ -18,15 +18,14 @@ updateViewCount('puneLockdown');
             <div class="col-12">
                 <br/>
                 <a href="index.php" class="btn btn-danger">Return back to Home</a>
-                <h3 class="mt-4">Pune Semi-Lockdown is applicable till 30th April (Friday):</h3>
+                <h3 class="mt-4">Pune Break The Chain (Janta Curfew) is applicable from 14th to 28th April:</h3>
+                <h5><span class="text-danger">Note: </span>New updates are highlighted with the <span class="bg-info">blue color.</span></h5>
                 <div class="row pb-5">
                     <div class="col-12 col-xl-6">
                         <h3 class="mt-4">Curfew (barring essential servies):</h3>
                         <ul class="list-group">
-                            <li class="list-group-item"><b>On weekends</b>, curfew will be imposed from <b>6pm on Fridays to 7am on Mondays</b>.</li>
-                            <li class="list-group-item"><b>On weekdays</b>, travel restrictions from <b>6pm to 7am</b> for all vehicles including cabs, taxis and autorickshaws.</li>
+                            <li class="list-group-item bg-info"><b>Everyday</b>, curfew will be imposed from <b>8pm to 7am</b> and Section 144 is imposed.</li>
                             <li class="list-group-item"><b>Complete ban</b> on social, political, and religious meetings.</li>
-                            <li class="list-group-item"><b>Gardens, Public Ground</b> will be open only during non-curfew hours.</li>
                             <li class="list-group-item"><b>Private Transport</b> will be working only during non-curfew hours.</li>
                             <li class="list-group-item"><b>Auto Rickshaw</b> – Driver + 2 passengers only.</li>
                             <li class="list-group-item"><b>Taxi cab/four-wheelers</b> – Driver + 50% vehicle capacity as per RTO.</li>
@@ -47,7 +46,7 @@ updateViewCount('puneLockdown');
                         <ul class="list-group">
                             <li class="list-group-item">Restaurants (dine-in), bars, food courts, malls to remain shut till further orders.</li>
                             <li class="list-group-item">Barber shops, salons, beauty parlors, spas to remain shut till further orders.</li>
-                            <li class="list-group-item">Cinemas, drama theatres, amusement parks, water parks, arcades, video game parlours to remain shut till further orders.</li>
+                            <li class="list-group-item">Cinemas, drama theatres, amusement parks, water parks, gardens, arcades, video game parlours to remain shut till further orders.</li>
                             <li class="list-group-item">Clubs, swimming pools, sports complexes, gyms to remain shut till further orders.</li>
                             <li class="list-group-item">Schools and colleges shut till <b>April 30</b>, all coaching classes, excluding MPSC, UPSC study centres with 50% capacity, to remain shut.</li>
                         </ul>
@@ -55,6 +54,7 @@ updateViewCount('puneLockdown');
                     <div class="col-12 col-xl-6">
                         <h3 class="mt-4">What is permitted?</h3>
                         <ul class="list-group">
+                            <li class="list-group-item bg-info"><b>Road side vendors</b> to function from 7am to 8pm.</li>
                             <li class="list-group-item">Milk, vegetable, fruit supply, newspaper distribution, establishments providing essential services and their staff, people going for vaccination and their vehicles, and vehicles transporting employees for industrial work are <b>exempted from night travel restrictions</b>.</li>
                             <li class="list-group-item">PMPML buses only for emergency services.</li>
                             <li class="list-group-item"><b>Online food delivery from 7am till 6pm</b>.</li>
