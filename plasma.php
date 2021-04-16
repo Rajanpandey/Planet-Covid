@@ -95,11 +95,13 @@ mysqli_close($conn);
                             </thead>
                             <tbody>
                             <?php
+                                $k = 0;
                                 for ($i=count($plasmaArr)-1; $i>=0; $i=$i-1) {
                                     if ($plasmaArr[$i]['type'] == "request") {
+                                        $k += 1;
                             ?>
                                         <tr class="table-danger">
-                                            <td><?php echo count($plasmaArr) - $i ?></td>
+                                            <td><?php echo $k ?></td>
                                             <td><?php echo $plasmaArr[$i]['bloodgroup']; ?></td>
                                             <td><?php echo $plasmaArr[$i]['loc']; ?></td>
                                             <td><?php echo $plasmaArr[$i]['phone']; ?></td>
@@ -148,11 +150,13 @@ mysqli_close($conn);
                             </thead>
                             <tbody>
                             <?php
+                                $k = 0;
                                 for ($i=count($plasmaArr)-1; $i>=0; $i=$i-1) {
                                     if ($plasmaArr[$i]['type'] == "donate") {
+                                        $k += 1;
                             ?>
                                         <tr class="table-success">
-                                            <td><?php echo count($plasmaArr) - $i ?></td>
+                                            <td><?php echo $k ?></td>
                                             <td><?php echo $plasmaArr[$i]['bloodgroup']; ?></td>
                                             <td><?php echo $plasmaArr[$i]['loc']; ?></td>
                                             <td><?php echo $plasmaArr[$i]['phone']; ?></td>
@@ -170,21 +174,21 @@ mysqli_close($conn);
             <div class="col-12 col-xl-6">
                 <h3 class="">What is Plasma?</h3>
                 <ul class="list-group">
-                    <li class="list-group-item">Plasma is the liquid part of your blood made up of about 90% water and makes up 50% of total blood volume</li>
+                    <li class="list-group-item">Plasma is the yellow liquid part of your blood made up of about <b>90% water and makes up 50% of total blood volume</b></li>
                     <li class="list-group-item">Plasma has antibodies that help fight infection, plus proteins called albumin and fibrinogen.</li>
-                    <li class="list-group-item">Just 1 donation can save up to 3 lives.</li>
-                    <li class="list-group-item">Plasma donation takes about 45 to 60 minutes.</li>
-                    <li class="list-group-item">Friends and family members can donate blood for their loved ones.</li>
+                    <li class="list-group-item">Just <b>1 donation</b> can save up to <b>3 lives</b>.</li>
+                    <li class="list-group-item">Plasma donation takes about <b>45 to 60 minutes</b>.</li>
+                    <li class="list-group-item">Family members can donate blood for their loved ones.</li>
                 </ul>
             </div>
             <div class="col-12 col-xl-6">
                 <h3 class="">Who can donate Plasma?</h3>
                 <ul class="list-group">
-                    <li class="list-group-item">You have to be at least 18 years old and weigh at least 50 kgs.</li>
+                    <li class="list-group-item">You have to be <b>at least 18 years</b> old and weigh <b>at least 50 kgs</b>.</li>
                     <li class="list-group-item">People who have <b>fully recovered from COVID-19 for at least two weeks</b>.</li>
-                    <li class="list-group-item">If you have type AB blood, you are a universal plasma donor.</li>
-                    <li class="list-group-item">You may donate plasma every 28 days.</li>
-                    <li class="list-group-item">While 1/3rd of the population is eligible to give blood, less than 1/50th actually donate</li>
+                    <li class="list-group-item">If you have type <b>AB blood</b>, you are a universal plasma donor.</li>
+                    <li class="list-group-item">You may donate plasma <b>every 28 days</b>.</li>
+                    <li class="list-group-item">While <b>1/3rd</b> of the population is eligible to give blood, less than <b>1/50th</b> actually donate</li>
                 </ul>
             </div>
             <div class="col-12">
