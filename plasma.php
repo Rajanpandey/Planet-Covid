@@ -91,6 +91,7 @@ mysqli_close($conn);
                                     <th>Blood Group</th>
                                     <th>Flat No/RH</th>
                                     <th>Contact</th>
+                                    <th>Date</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -105,6 +106,7 @@ mysqli_close($conn);
                                             <td><?php echo $plasmaArr[$i]['bloodgroup']; ?></td>
                                             <td><?php echo $plasmaArr[$i]['loc']; ?></td>
                                             <td><?php echo $plasmaArr[$i]['phone']; ?></td>
+                                            <td><?php echo $plasmaArr[$i]['date']; ?></td>
                                         </tr>
                             <?php
                                     }
@@ -146,6 +148,7 @@ mysqli_close($conn);
                                     <th>Blood Group</th>
                                     <th>Flat No/RH</th>
                                     <th>Contact</th>
+                                    <th>Date</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -160,6 +163,7 @@ mysqli_close($conn);
                                             <td><?php echo $plasmaArr[$i]['bloodgroup']; ?></td>
                                             <td><?php echo $plasmaArr[$i]['loc']; ?></td>
                                             <td><?php echo $plasmaArr[$i]['phone']; ?></td>
+                                            <td><?php echo $plasmaArr[$i]['date']; ?></td>
                                         </tr>
                             <?php
                                     }

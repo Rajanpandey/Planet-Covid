@@ -24,7 +24,8 @@ updateViewCount('puneLockdown');
                     <div class="col-12 col-xl-6">
                         <h3 class="mt-4">Curfew (barring essential servies):</h3>
                         <ul class="list-group">
-                            <li class="list-group-item bg-info"><b>Everyday</b>, curfew will be imposed from <b>8pm to 7am</b> and Section 144 is imposed.</li>
+                            <li class="list-group-item bg-info"><b>On weekdays</b>, curfew will be imposed from <b>6pm to 7am</b> and Section 144 is imposed.</li>
+                            <li class="list-group-item bg-info"><b>On weekends</b>, curfew will be imposed from <b>for the whole day</b>.</li>
                             <li class="list-group-item"><b>Complete ban</b> on social, political, and religious meetings.</li>
                             <li class="list-group-item"><b>Private Transport</b> will be working only during non-curfew hours.</li>
                             <li class="list-group-item"><b>Auto Rickshaw</b> – Driver + 2 passengers only.</li>
@@ -54,7 +55,7 @@ updateViewCount('puneLockdown');
                     <div class="col-12 col-xl-6">
                         <h3 class="mt-4">What is permitted?</h3>
                         <ul class="list-group">
-                            <li class="list-group-item bg-info"><b>Road side vendors</b> to function from 7am to 8pm.</li>
+                            <li class="list-group-item bg-info"><b>Road side vendors</b> to function from 7am to 6pm.</li>
                             <li class="list-group-item">Milk, vegetable, fruit supply, newspaper distribution, establishments providing essential services and their staff, people going for vaccination and their vehicles, and vehicles transporting employees for industrial work are <b>exempted from night travel restrictions</b>.</li>
                             <li class="list-group-item">PMPML buses only for emergency services.</li>
                             <li class="list-group-item"><b>Online food delivery from 7am till 6pm</b>.</li>

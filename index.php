@@ -23,6 +23,25 @@ while($row = mysqli_fetch_assoc($result)) {
     $casesArr[] = $row;
 }
 
+$plasma = [
+    'O+' => 'Anyone',
+    'O-' => 'Anyone',
+    'A+' => 'A, A-, AB, AB-',
+    'A-' => 'A, A-, AB, AB-',
+    'B+' => 'B, B-, AB, AB-',
+    'B-' => 'B, B-, AB, AB- ',
+    'AB+' => 'AB, AB-',
+    'AB-' => 'AB, AB-',
+];
+
+$query = "SELECT * FROM plasma";
+$result = mysqli_query($conn, $query);
+
+$plasmaArr = array();
+while($row = mysqli_fetch_assoc($result)) {
+    $plasmaArr[] = $row;
+}
+
 if(isset($_POST['submitSurvey'])) {
     $answer = mysqli_real_escape_string($conn, trim($_POST['holi']));
 
@@ -58,29 +77,48 @@ mysqli_close($conn);
 <body>
     <div class="container-fluid pt-3">
         <div class="row">
-            <div class="col-8">
+            <div class="col-6">
                 <div class="row">
-                    <div class="col-4 pb-4"><center><a href="map.php" class="btn btn-danger btn-lg btn-block">Planet - Covid Map</a></center></div>
-                    <div class="col-4"><center><a href="vaccine.php" class="btn btn-warning btn-lg btn-block">Pune - Vaccine Status</a></center></div>
-                    <div class="col-4 pb-4"><center><a href="puneLockdown.php" class="btn btn-success btn-lg btn-block">Info - Break the Chain</a></center></div>
-                    <div class="col-4"><center><a href="planet.php" class="btn btn-danger btn-lg btn-block">Planet - Covid Spread</a></center></div>
-                    <div class="col-4 pb-4"><center><a href="pune.php" class="btn btn-warning btn-lg btn-block">Pune - Covid Spread</a></center></div>
-                    <div class="col-4"><center><a href="protectYourself.php" class="btn btn-success btn-lg btn-block">Info - Protect Yourself</a></center></div>
+                    <div class="col-4 pb-4"><center><a href="map.php" class="btn btn-danger btn-block">Planet - Covid Map</a></center></div>
+                    <div class="col-4"><center><a href="vaccine.php" class="btn btn-warning btn-block">Pune - Vaccine Status</a></center></div>
+                    <div class="col-4 pb-4"><center><a href="puneLockdown.php" class="btn btn-success btn-block">Info - Break the Chain</a></center></div>
+                    <div class="col-4"><center><a href="planet.php" class="btn btn-danger btn-block">Planet - Covid Spread</a></center></div>
+                    <div class="col-4 pb-4"><center><a href="pune.php" class="btn btn-warning btn-block">Pune - Covid Spread</a></center></div>
+                    <div class="col-4"><center><a href="protectYourself.php" class="btn btn-success btn-block">Info - Protect Yourself</a></center></div>
                 </div>
             </div>
-            <div class="col-4">
-                <h5>Your feedback and suggestions are valuable:</h5>
-                <form action="" method="POST">
-                    <div class="form-group">
-                        <textarea class="form-control ml-3 mb-3" rows="2" name="feedback" required></textarea>
-                        <button type="submit" name="saveFeedback" class="btn btn-primary ml-3"><i class="fas fa-comment-alt"></i>&nbsp; Submit Feedback Anonymously</button>
-                    </div>
-                </form>
+            <div class="col-6">
+                <table class="table table-bordered table-hover table-sm" id="myTable">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Blood Group of patient</th>
+                            <th>Blood Group Required</th>
+                            <th>Flat No/RH</th>
+                            <th>Contact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+                        $k = 0;
+                        for ($i=count($plasmaArr)-1; $i>=0; $i=$i-1) {
+                            if ($plasmaArr[$i]['type'] == "request") {
+                                $k += 1;
+                    ?>
+                                <tr class="table-danger">
+                                    <td><?php echo $plasmaArr[$i]['bloodgroup']; ?></td>
+                                    <td><?php echo $plasma[$plasmaArr[$i]['bloodgroup']]; ?></td>
+                                    <td><?php echo $plasmaArr[$i]['loc']; ?></td>
+                                    <td><?php echo $plasmaArr[$i]['phone']; ?></td>
+                                </tr>
+                    <?php
+                            }
+                        }
+                    ?>
+                    </tbody>
+                </table>
+                <center class="d-grid gap-2"><a href="plasma.php" class="btn btn-danger btn-block">Donate Plasma</a></center>
             </div>
-            <div class="col-12 table-responsive">
-                <center><a href="plasma.php" class="btn btn-danger btn-lg btn-block">Request or Volunteer to Donate Plasma</a>
-                <br/>
-                <br/>
+            <div class="col-12 table-responsive pt-5">
                 <center><h4>Active Cases in Planet Millennium: <span class="text-danger"><?php echo $activeCases ?></span>/<?php echo $totalCases ?></h4>
                 <p><b class="text-danger">Note:</b> These are the reported cases that we know. As most of the cases are asymptomatic, there can be x6-x10 more cases.</p></center>
                 <h4>All Reported Cases:</h4>
