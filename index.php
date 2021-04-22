@@ -84,7 +84,7 @@ mysqli_close($conn);
                     <div class="col-4 pb-4"><center><a href="puneLockdown.php" class="btn btn-success btn-block">Info - Break the Chain</a></center></div>
                     <div class="col-4"><center><a href="planet.php" class="btn btn-danger btn-block">Planet - Covid Spread</a></center></div>
                     <div class="col-4 pb-4"><center><a href="pune.php" class="btn btn-warning btn-block">Pune - Covid Spread</a></center></div>
-                    <div class="col-4"><center><a href="protectYourself.php" class="btn btn-success btn-block">Info - Protect Yourself</a></center></div>
+                    <div class="col-4"><center><a href="https://covidpune.com" class="btn btn-secondary btn-block">Pune - Find Hospital Beds</a></center></div>
                 </div>
             </div>
             <div class="col-6">

@@ -24,7 +24,7 @@ updateViewCount('puneLockdown');
                     <div class="col-12 col-xl-6">
                         <h3 class="mt-4">Curfew (barring essential servies):</h3>
                         <ul class="list-group">
-                            <li class="list-group-item bg-info"><b>On weekdays</b>, curfew will be imposed from <b>6pm to 7am</b> and Section 144 is imposed.</li>
+                            <li class="list-group-item bg-info"><b>On weekdays</b>, curfew will be imposed from <b>7am to 11am</b> and Section 144 is imposed.</li>
                             <li class="list-group-item bg-info"><b>On weekends</b>, curfew will be imposed from <b>for the whole day</b>.</li>
                             <li class="list-group-item"><b>Complete ban</b> on social, political, and religious meetings.</li>
                             <li class="list-group-item"><b>Private Transport</b> will be working only during non-curfew hours.</li>
